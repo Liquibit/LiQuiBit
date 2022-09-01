@@ -1,0 +1,10 @@
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
+.vscode
+build/
+.DS_Store
+gcc-arm-none-eabi-8-2018-q4-major
+venv/

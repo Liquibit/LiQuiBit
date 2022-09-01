@@ -1,0 +1,3 @@
+[submodule "Sub-IoT-Stack"]
+	path = Sub-IoT-Stack
+	url = git@github.com-personal:Liquibit/Sub-IoT-Stack.git
