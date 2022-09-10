@@ -1,0 +1,24 @@
+- title: Getting Started
+  docs:
+  - Summary-quickstart
+  - The-Push7-sensor
+  - The-IOWAY-gateway
+  - Home-assistant-integration
+- title: Creating custom firmware
+  docs:
+  - Sub-iot
+  - The-push7-firmware
+  - The-IOWAY-firmware
+- title: Additional information
+  docs:
+  - Dash7
+  - Home-assistant
+- title: Datasheet
+  docs: 
+  - Pin-out
+  - Power-consumption
+  - Pir
+  - Light-sensor
+  - Humidity-temperature-sensor
+  - Hall-effect
+  - Accelerometer
