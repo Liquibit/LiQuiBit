@@ -3,16 +3,22 @@ title: LiQuiBit
 email: liam.oorts@hotmail.com
 description: >
   Open source code for all boards available through LiQuiBit
+lang: en-US
 
-baseurl: "/" # the subpath of your site, e.g. /blog/
-url: https://liquibit.github.io/ # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: https://docs.github.io # the base hostname & protocol for your site
 git_address: https://github.com/LiQuiBit/LiQuiBit
 git_edit_address: https://github.com/LiQuiBit/LiQuiBit/blob/main/docs
+
+# theme options from https://bootswatch.com/3/
+# comment out this to use default Bootstrap
+bootwatch: darkly # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-gems:
+# Plugins (previously gems:)
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
@@ -21,8 +27,11 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - .idea/
   - .gitignore
   - README.md
+  - vendor
+timezone: Europe/Berlin
 defaults:
 - scope:
     path: _posts
