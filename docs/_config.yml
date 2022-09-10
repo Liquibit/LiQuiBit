@@ -1,0 +1,49 @@
+# Site settings
+title: LiQuiBit
+email: liam.oorts@hotmail.com
+description: >
+  Open source code for all boards available through LiQuiBit
+
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: https://liquibit.github.io/ # the base hostname & protocol for your site
+git_address: https://github.com/LiQuiBit/LiQuiBit
+git_edit_address: https://github.com/LiQuiBit/LiQuiBit/blob/main/docs
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - README.md
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true
