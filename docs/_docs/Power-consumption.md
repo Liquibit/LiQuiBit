@@ -12,27 +12,19 @@ permalink: /docs/Power-consumption/
         var i = 0; for (i = 0; i <= 5; i++) { calcule(); }
     }
     function calcule() {
-        if (Excel2Html.tx_power_selection.value == 0) {
-            if (Excel2Html.pir_count.value == 0) 
-            {
-                Excel2Html.bat_life.value = ((300 / ((parseFloat(Excel2Html.magnet_count.value) * 0.000045 * 2) + (parseFloat(Excel2Html.pir_count.value) * 0.000045 * 2) + (parseFloat(Excel2Html.button_count.value) * 0.000045 * 2) + ((60 / parseFloat(Excel2Html.sensor_interval.value)) * 24 * 0.000045 * (light_sensor.checked + temperature_sensor.checked)) + ((60 / parseFloat(Excel2Html.battery_interval.value)) * 24 * 0.000045) + 0.007)) / 24 / 30).toFixed(2);
-            }
-            else 
-            {
-                Excel2Html.bat_life.value = ((300 / ((parseFloat(Excel2Html.magnet_count.value) * 0.000045 * 2) + (parseFloat(Excel2Html.pir_count.value) * 0.000045 * 2) + (parseFloat(Excel2Html.button_count.value) * 0.000045 * 2) + ((60 / parseFloat(Excel2Html.sensor_interval.value)) * 24 * 0.000045 * (light_sensor.checked + temperature_sensor.checked)) + ((60 / parseFloat(Excel2Html.battery_interval.value)) * 24 * 0.000045) + 0.015)) / 24 / 30).toFixed(2);
-            }
-        } 
-        else 
-        {
-            if (Excel2Html.pir_count.value == 0) 
-            {
-                Excel2Html.bat_life.value = ((300 / ((parseFloat(Excel2Html.magnet_count.value) * 0.0001 * 2) + (parseFloat(Excel2Html.pir_count.value) * 0.0001 * 2) + (parseFloat(Excel2Html.button_count.value) * 0.0001 * 2) + ((60 / parseFloat(Excel2Html.sensor_interval.value)) * 24 * 0.0001 * (light_sensor.checked + temperature_sensor.checked)) + ((60 / parseFloat(Excel2Html.battery_interval.value)) * 24 * 0.0001) + 0.007)) / 24 / 30).toFixed(2);
-            }
-            else 
-            {
-                Excel2Html.bat_life.value = ((300 / ((parseFloat(Excel2Html.magnet_count.value) * 0.0001 * 2) + (parseFloat(Excel2Html.pir_count.value) * 0.0001 * 2) + (parseFloat(Excel2Html.button_count.value) * 0.0001 * 2) + ((60 / parseFloat(Excel2Html.sensor_interval.value)) * 24 * 0.0001 * (light_sensor.checked + temperature_sensor.checked)) + ((60 / parseFloat(Excel2Html.battery_interval.value)) * 24 * 0.0001) + 0.015)) / 24 / 30).toFixed(2);
-            }
-        }
+
+        var package_count_per_day = (parseFloat(Excel2Html.magnet_count.value)*2) +  (parseFloat(Excel2Html.pir_count.value)*2) + (parseFloat(Excel2Html.button_count.value)*2) +(((60 / parseFloat(Excel2Html.sensor_interval.value))*24) * (light_sensor.checked + temperature_sensor.checked)) + ((60 / parseFloat(Excel2Html.battery_interval.value))*24); // get number of packages
+        
+        var sleep_current_ma = (Excel2Html.pir_count.value == 0) ? 0.007 : 0.015; // measured values
+        var active_current_ma = (Excel2Html.tx_power_selection.value == 0) ? 14.4 : 32; // measured values
+        var active_time_day_per_package = 0.27/60/60/24; // 270ms to days
+        var active_time_day = active_time_day_per_package * package_count_per_day; // time while consuming active current
+        var sleep_time_day = 1 - active_time_day; // the rest of the day we sleep
+        
+        var avarage_consumption_day = (active_time_day * active_current_ma) + (sleep_current_ma * sleep_time_day);
+        
+        Excel2Html.bat_life.value = ((300 / (avarage_consumption_day)) / 24 / 30).toFixed(2);
+        
         if(light_sensor.checked || temperature_sensor.checked)
         {
                 document.getElementById("sensor_interval").style.display = "block";
@@ -118,12 +110,11 @@ For the current consumption of transmissions, we take into account how long the 
 * Tx power 15: 270ms - 14.4mA
 * Tx power 17: 270ms - 32mA
 
-Then, we calculate the average current consumption that is consumed when we have to transmit the selected amount of messages. We get this average value by considering how long we will be in the active current mode, by adding up all the required send messages, versus how long we are sleeping.
+We calculate how long we will be consuming the active current during a day considering the number of messages that need to be send. By taking into account the remaining sleep time, we can derive an total average consumption.
 
 Finally, we take the battery capacity and divide this by the average current and convert this to the amount of months the battery would last. 
 
 *Notes*
-* The sleep current is still counted when transmitting for simplicity
 * A button press/magnetic change/pir always result in 2 messages being send
 * We consider a month to be 30 days in the tool for simplicity
 * The used formula can be viewed in the html code of the page
