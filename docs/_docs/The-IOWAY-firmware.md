@@ -3,11 +3,20 @@ title: The IOWAY firmware
 permalink: /docs/The-IOWAY-firmware/
 ---
 
-# Operational mode
 
-Jumper selection: esp32 connected to DASH7 modem
+# Programming the IOWAY
 
-<img src="{{ site.baseurl }}/assets/img/gw_operational.jpg" width="200" height="200"/>
+The IOWAY consists of 3 elements:
+- ESP32
+- DASH7 modem
+- serial-to-USB converter
+ 
+On this page we list instructions on how to create custom applications for the ESP32 and DASH7 modem and how they can be programmed using the serial-to-USB converter.
+
+## windows drivers
+
+To program the IOWAY, the device will need to be connected to a computer. This connection is handled by the on board serial-to-USB converter. A windows PC will require a driver to be installed for this chip. This driver can be downloaded from the [silabs website](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads).
+We recommend downloading the [CP210x Windows Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip) and running the CP210xVCPInstaller_***.exe inside the zip file. The computer should now recognize the IOWAY and create a COM port for the device.
 
 # DASH7 Modem
 
@@ -98,3 +107,11 @@ Hard resetting via RTS pin...
 ```
 
 The program should now be running on the ESP32!
+
+# Operational mode
+
+To return the setup to an operational state, the following jumper selection should be used.
+
+Jumper selection: esp32 connected to DASH7 modem
+
+<img src="{{ site.baseurl }}/assets/img/gw_operational.jpg" width="200" height="200"/>
