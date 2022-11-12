@@ -76,6 +76,8 @@ Jumper selection: esp32 connected to serial-to-usb for flashing the device
 
 In the Arduino IDE, first add an *Additional Boards Manager URL*: <https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json>
 
+Our code currently depends on the library [PubSubClient](https://www.arduino.cc/reference/en/libraries/pubsubclient/) by Nick O'Leary, version 2.8.0 is known to be working. Be sure to install this through the Library Manager. 
+
 Then, configure the following settings:
 
 | Setting             | Value                 |
