@@ -14,6 +14,12 @@ Sub-IoT is an open-source DASH7 and LoRaWAN stack. This stack is used for the Pu
 * GCC-based toolchain: For example [GNU ARM Embedded](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain) for ARM Cortex-M based platforms. By default, the build system assumes the GNU ARM Embedded toolchain is located in the PATH environment variable (meaning you can run arm-none-eabi-gcc without specifying the full path). The version of the GNU ARM Embedded toolchain that most well supports Sub-IoT is gcc-arm-none-eabi-8-2018-q4-major.
 * [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html): multi-OS tool for programming STM32 products.
 
+### Ubuntu
+
+Commands for the needed tools:
+* pip install cmake
+* sudo apt-get install gcc-arm-none-eabi
+
 ## Building instructions {#building}
 
 To build the Push7 and DASH7 gateway application, clone the [LiQuiBit repository](https://github.com/Liquibit/LiQuiBit) and build it.
