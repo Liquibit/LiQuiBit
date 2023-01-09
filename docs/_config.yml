@@ -41,11 +41,20 @@ defaults:
     sectionid: blog
 
 - scope:
-    path: _docs
+    path: _docs/DASH7_evaluation_kit
     type: docs
   values:
     layout: docs
-    sectionid: docs
+    sectionid: DASH7_evaluation_kit
+    seo:
+      type: "WebPage"
+
+- scope:
+    path: _docs/EnergyTrackingCaMeX-IA
+    type: docs
+  values:
+    layout: docs
+    sectionid: EnergyTrackingCaMeX-IA
     seo:
       type: "WebPage"
 
