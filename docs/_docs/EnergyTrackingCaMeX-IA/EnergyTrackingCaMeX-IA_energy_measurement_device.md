@@ -3,9 +3,9 @@ title: Energy measurement device
 permalink: /EnergyTrackingCaMeX-IA/EnergyTrackingCaMeX-IA_energy_measurement_device/
 ---
 
-# Energy measurement
+## Energy measurement
 
-The selected energy measurement device had to be able to measure high currents. Since these high currents become problamatic with more traditional methods, a sollution was selected where rogowski coils could be used.
+The chosen energy measurement device was required to be able to accurately measure large currents. As these high currents can pose challenges with traditional measuring techniques, a solution was selected that utilizes Rogowski coils.
 
 A Rogowski coil is a type of current transformer that is used to measure alternating current (AC) in high-voltage power systems. It consists of a single, continuous wire or strip of conductive material that is wound in a spiral or helical shape around a core. The core can be made of a ferromagnetic material such as iron, or it can be made of a non-ferromagnetic material such as plastic or air.
 
@@ -31,7 +31,7 @@ Modbus is a protocol that enables communication between a server and one or more
 
 ## Device settings
 
-The schematic below shows the current setup:
+The schematic below shows the electrical setup:
 
 <img src="{{ site.baseurl }}\assets\img\energyTrackingCaMeX-IA\acurev_schematic.png" width="500"/>
 
@@ -39,4 +39,4 @@ For this schematic, the following settings are required:
 
 <img src="{{ site.baseurl }}\assets\img\energyTrackingCaMeX-IA\acurev_settings.png" width="800"/>
 
-These settings can be configured either directly on the device or by using a MODBUS to USB device and the acuUtils software. For more details, refer to the official manual at the following link: https://www.accuenergy.com/products/acurev-1310-din-rail-power-energy-meter/
+These settings can be configured either directly on the device or by using a MODBUS to USB device and the acuUtils software. For more details, refer to the official manual at the following link: [https://www.accuenergy.com/products/acurev-1310-din-rail-power-energy-meter/](https://www.accuenergy.com/products/acurev-1310-din-rail-power-energy-meter/)

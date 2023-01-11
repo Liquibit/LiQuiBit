@@ -4,5 +4,5 @@ permalink: /EnergyTrackingCaMeX-IA/home/
 redirect_from: /EnergyTrackingCaMeX-IA/index.html
 ---
 
-Use the navigation tree on the left to browse the docs. The documentation is split into a getting started guide for new users,
-and other topics for more advanced users.
+This project is a system for measuring and transmitting energy consumption data wirelessly in real-time to an IoT platform for analysis and storage to improve energy management on a college campus.
+Use the navigation tree on the left to browse the docs. 
