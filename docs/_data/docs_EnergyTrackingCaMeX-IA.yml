@@ -1,0 +1,12 @@
+- title: Project overview
+  docs:
+  - EnergyTrackingCaMeX-IA_Summary
+- title: Energy Measurement
+  docs:
+  - EnergyTrackingCaMeX-IA_energy_measurement_overview
+  - EnergyTrackingCaMeX-IA_energy_measurement_device
+  - EnergyTrackingCaMeX-IA_MODBUS-to-DASH7
+- title: Network
+  docs: 
+  - EnergyTrackingCaMeX-IA_DASH7_gateway
+  - EnergyTrackingCaMeX-IA_mindsphere
