@@ -24,7 +24,7 @@ Here is a list of steps taken to send the data to mindsphere:
 
 1. Instantiate model on topic: tc/camexia/camexia_dash7_gateway_1/o/amo_v3/m
 
-   ```
+   ``` json
 
    {
      "id": "12314",
@@ -131,7 +131,7 @@ Here is a list of steps taken to send the data to mindsphere:
 2. Subscribe to topic: tc/camexia/camexia_dash7_gateway_1/i/amo_v3/#
 3. Publish to topic: tc/camexia/camexia_dash7_gateway_1/o/amo_v3/i
 
-   ```
+   ``` json
    {
        "id": "Energy_4_DeviceInstantiationRequest",
        "data": {
@@ -145,7 +145,7 @@ Here is a list of steps taken to send the data to mindsphere:
    ```
 4. (Optional) To test the connection, publish data to timeseries: tc/camexia/camexia_dash7_gateway_1/o/mc_v3/ts.
 
-   ```
+   ``` json
    {
      "timeseries": [
        {
