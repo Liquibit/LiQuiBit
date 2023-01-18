@@ -46,7 +46,7 @@ Here is a list of steps taken to send the data to mindsphere:
                   "qualityCode":true
                 },
                 {
-                  "name":"<span style="color :yellow; ">apparentEnergy</span> ",
+                  "name":"<span style="color :yellow; ">apparentEnergy</span>",
                   "dataType":"LONG",
                   "unit":"VAh",
                   "searchable":true,
@@ -90,7 +90,7 @@ Here is a list of steps taken to send the data to mindsphere:
             {
               "referenceId":"<span style="color :#CDA434; ">energy_4_AssetReference</span>",
               "parentReferenceId":"root",
-              "typeId":<span style="color :#9B111E; ">camexia.energy_4_AssetType</span>,
+              "typeId":"<span style="color :#9B111E; ">camexia.energy_4_AssetType</span>",
               "name":"energy_4_Asset",
               "description":"Asset with energy measured"
             }
@@ -105,10 +105,10 @@ Here is a list of steps taken to send the data to mindsphere:
               "variableName":"<span style="color :red; ">realEnergy</span>"
             },
             {
-              "dataPointId":"<span style="color :orange; ">apparentEnergy</span> ",,
+              "dataPointId":"<span style="color :orange; ">apparentEnergy</span>",
               "assetReferenceId":"<span style="color :#CDA434; ">energy_4_AssetReference</span>",
               "aspectName":"<span style="color :#422666; ">energy_4_Aspect</span>",
-              "variableName":"<span style="color :yellow; ">apparentEnergy</span> ",
+              "variableName":"<span style="color :yellow; ">apparentEnergy</span>",
             },
             {
               "dataPointId":"<span style="color :cyan; ">validEnergy</span>",
@@ -162,7 +162,7 @@ Here is a list of steps taken to send the data to mindsphere:
              "qualityCode": "0"
            },
            {
-             "dataPointId": "<span style="color :orange; ">apparentEnergy</span> ",,
+             "dataPointId": "<span style="color :orange; ">apparentEnergy</span>",
              "value": 15,
              "qualityCode": "0"
            },
