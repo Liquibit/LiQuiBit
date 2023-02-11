@@ -31,16 +31,23 @@ To build the Push7 and DASH7 gateway application, clone the [LiQuiBit repository
     [100%] Built target gateway.elf
     Built target ioway
 
-This will have created a build folder containing firmware for the Push7 and for the DASH7-modem of the IOWAY gateway. Both have a debug and release build. 
+This will have created a build folder containing firmware for the Push7 and for the DASH7-modem of the IOWAY gateway. Both have a release, debug and RTT-debug build. 
 
-The debug build will enable logging and forward them over the UART port. Release will make sure everything is optimised for a long battery lifetime.
+Release will make sure everything is optimised for a long battery lifetime.
+The debug build will enable logging and forward them over the UART port. 
+The RTT-debug build will enable logging and make it available through RTT.
 
 Thus the following are available:
 
 | Board    | Type               | Filename               |
 |----------|----------------------|----------------------|
-| Push7 | Release      | /your/path/LiQuiBit/build/Push7-release/apps/push7_button/push7_button-full.hex      |
-| Push7 | Debug      | /your/path/LiQuiBit/build/Push7-debug/apps/push7_button/push7_button-full.hex      |
+| Push7 | Release      | /your/path/LiQuiBit/build/PUSH7-release/apps/push7_button/push7_button-full.hex      |
+| Push7 | Debug      | /your/path/LiQuiBit/build/PUSH7-debug/apps/push7_button/push7_button-full.hex      |
+| Push7 | RTT-Debug      | /your/path/LiQuiBit/build/PUSH7-rtt-debug/apps/push7_button/push7_button-full.hex      |
+| Push7 v3 | Release      | /your/path/LiQuiBit/build/PUSH7_V3-release/apps/push7_button/push7_button-full.hex      |
+| Push7 v3 | Debug      | /your/path/LiQuiBit/build/PUSH7_V3-debug/apps/push7_button/push7_button-full.hex      |
+| Push7 v3 | RTT-Debug      | /your/path/LiQuiBit/build/PUSH7_V3-rtt-debug/apps/push7_button/push7_button-full.hex      |
 | IOWAY | Release      | /your/path/LiQuiBit/build/IOWay-release/apps/gateway/gateway-full.hex      |
 | IOWAY | Debug      | /your/path/LiQuiBit/build/IOWay-debug/apps/gateway/gateway-full.hex      |
+| IOWAY | RTT-Debug      | /your/path/LiQuiBit/build/IOWay-rtt-debug/apps/gateway/gateway-full.hex      |
 
