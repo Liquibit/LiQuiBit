@@ -5,7 +5,11 @@ permalink: /docs/The-IOWAY-gateway/
 
 ## Capabilities
 
-The IOWAY PCB contains three elements. A serial-to-USB converter, an ESP32 and a microcontroller package with an integrated radio chip.
+The IOWAY PCB contains two elements. A minimal Link7 and an [Olimex ESP32-PoE](https://www.olimex.com/Products/IoT/ESP32/ESP32-POE/open-source-hardware).
+
+The Link7 provides us with DASH7 communication. An external antenna should be attached to the SMA connector and all received data will be forwarded to the next module.
+
+The Olimex ESP32-PoE is connected to this Link7 and takes care of the internet connection through Wi-Fi or ethernet. This board is programmable without any interaction and provides Power over Ethernet capabilities to the entire setup. It is a proven, open-source hardware design
 
 The serial-to-USB converter allows us to easily reprogram the other two chips. It also allows us to view logs from either microcontroller during development.
 

@@ -7,27 +7,25 @@ permalink: /docs/Summary-quickstart/
 
 ![]({{ site.baseurl }}/assets/img/dev_kit.jpg)
 
-The DASH7 evaluation kit is a collection of 2 hardware components. The Push7 device and the IOWAY gateway. The kit shows the capabilities of the DASH7 wireless protocol with a multifunctional sensor device and a versatile gateway that links the DASH7 communication to the internet using MQTT.
+The DASH7 evaluation kit comprises three distinct hardware components, each serving a unique purpose, making it an adaptable and comprehensive solution. Included in the kit are the Push7, Link7, and the IOWAY gateway. This kit effectively demonstrates the capabilities of the DASH7 wireless protocol through a multifunctional sensor device, a sensor that can be tailored to specific needs, and a flexible gateway that establishes a connection between DASH7 communication and the internet via MQTT.
 
 ## Setting up the IOWAY
 
 1.  Gather the required information for setting up the gateway
 
-    1.  WiFi credentials (SSID and password)
+    1.  MQTT broker (username and password)
 
-    2.  MQTT broker (username and password)
+    2.  Decide if you want to use Wi-Fi or ethernet. If Wi-Fi is your interface of choice, gather the SSID and password.
 
 2.  Connect the antenna
 
-3.  Verify the correct jumper configuration is selected <img src="{{ site.baseurl }}/assets/img/gw_operational.jpg" width="200" height="200"/>
+3.  Plugin the device in a USB power adapter or using Power over Ethernet
 
-4.  Plugin the device in a USB power adapter
+4.  If you chose the setup using Wi-Fi, connect to the Wi-Fi access point of the IOWAY called DASH7-gateway or scan the following QR code <img src="{{ site.baseurl }}/assets/img/qr-code_wifi.png" width="200" height="200"/>
 
-5.  Connect to the WiFi access point of the IOWAY called DASH7-gateway or scan the following QR code <img src="{{ site.baseurl }}/assets/img/qr-code_wifi.png" width="200" height="200"/>
+5.  Go the device webpage: <http://dash7-gateway.local> or scan the following QR code <img src="{{ site.baseurl }}/assets/img/qr-code-page.png" width="200" height="200"/>
 
-6.  Go the device webpage: <http://dash7-gateway.local> or scan the following QR code <img src="{{ site.baseurl }}/assets/img/qr-code-page.png" width="200" height="200"/>
-
-7.  Fill in the required information (SSID info and MQTT info) and press submit
+7.  Fill in the required information and press submit
 
 ## Setting up the Push7
 
