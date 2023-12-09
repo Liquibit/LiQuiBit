@@ -5,9 +5,9 @@ permalink: /docs/Summary-quickstart/
 
 ## DASH7 evaluation kit
 
-![]({{ site.baseurl }}/assets/img/dev_kit.jpg)
+![]({{ site.baseurl }}/assets/img/dev_kit_3.jpg)
 
-The DASH7 evaluation kit comprises three distinct hardware components, each serving a unique purpose, making it an adaptable and comprehensive solution. Included in the kit are the Push7, Link7, and the IOWAY gateway. This kit effectively demonstrates the capabilities of the DASH7 wireless protocol through a multifunctional sensor device, a sensor that can be tailored to specific needs, and a flexible gateway that establishes a connection between DASH7 communication and the internet via MQTT.
+The DASH7 evaluation kit comprises two distinct hardware components, each serving a unique purpose, making it an adaptable and comprehensive solution. Included in the kit are the Push7 and the IOWAY gateway. This kit effectively demonstrates the capabilities of the DASH7 wireless protocol through a multifunctional sensor device and a flexible gateway that establishes a connection between DASH7 communication and the internet via MQTT.
 
 ## Setting up the IOWAY
 

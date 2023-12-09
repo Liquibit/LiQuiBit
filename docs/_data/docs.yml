@@ -3,12 +3,14 @@
   - Summary-quickstart
   - The-Push7-sensor
   - The-IOWAY-gateway
+  - The-LINK7
   - Home-assistant-integration
 - title: Creating custom firmware
   docs:
   - Sub-iot
   - The-push7-firmware
   - The-IOWAY-firmware
+  - The-LINK7-firmware
 - title: Additional information
   docs:
   - Dash7

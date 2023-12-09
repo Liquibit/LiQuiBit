@@ -13,13 +13,13 @@ The Olimex ESP32-PoE is connected to this Link7 and takes care of the internet c
 
 The serial-to-USB converter allows us to easily reprogram the other two chips. It also allows us to view logs from either microcontroller during development.
 
-The ESP32 chip takes care of the internet connection through Wi-Fi communication. Two buttons are provided to interact with the ESP32: a reset button (circle) and the boot button (triangle). However, these buttons won't be necessary as the serial-to-USB converter also toggles the boot and reset pins without any extra user-interaction.
+The ESP32 chip takes care of the internet connection through Wi-Fi communication. Two buttons are provided to interact with the ESP32: a reset button and the boot button. However, these buttons won't be necessary as the serial-to-USB converter also toggles the boot and reset pins without any extra user-interaction.
 
-The last chip provides us with DASH7 communication. An external antenna should be attached to the SMA connector. Three buttons are available to interact with the DASH7 modem: a reset button (circle), a boot button (triangle) and a user button (marked '1').
+The last chip provides us with DASH7 communication. An external antenna should be attached to the SMA connector. Two buttons are available to interact with the DASH7 modem: a reset button and a boot button.
 
 ## Components
 
-![]({{ site.baseurl }}/assets/img/ioway.jpg)
+![]({{ site.baseurl }}/assets/img/gw.jpg)
 
 
 ## Default firmware

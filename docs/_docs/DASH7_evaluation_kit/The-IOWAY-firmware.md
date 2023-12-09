@@ -6,19 +6,17 @@ permalink: /docs/The-IOWAY-firmware/
 
 # Programming the IOWAY
 
-The IOWAY consists of 3 elements:
-- ESP32
-- DASH7 modem
-- serial-to-USB converter
+The IOWAY consists of 2 elements:
+- [Olimex ESP32-PoE](https://www.olimex.com/Products/IoT/ESP32/ESP32-POE/open-source-hardware)
+- Link7 (DASH7 modem)
  
-On this page we list instructions on how to create custom applications for the ESP32 and DASH7 modem and how they can be programmed using the serial-to-USB converter.
+On this page we list instructions on how to create custom applications for the Olimex ESP32-PoE and link7 and how they can be programmed using the serial-to-USB converter.
 
 ## windows drivers
 
-To program the IOWAY, the device will need to be connected to a computer. This connection is handled by the on board serial-to-USB converter. A windows PC will require a driver to be installed for this chip. This driver can be downloaded from the [silabs website](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads).
-We recommend downloading the [CP210x Windows Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip) and running the CP210xVCPInstaller_***.exe inside the zip file. The computer should now recognize the IOWAY and create a COM port for the device.
+To program the IOWAY, the device will need to be connected to a computer. This connection is handled by the on board serial-to-USB converter. A windows PC will require a driver to be installed for this chip. This driver can be downloaded from the USB drivers section on [Olimex ESP32-PoE](https://www.olimex.com/Products/IoT/ESP32/ESP32-POE/open-source-hardware).
 
-# DASH7 Modem
+# Link7 (DASH7 Modem)
 
 ## Default firmware architecture
 
@@ -30,27 +28,21 @@ In the Sub-IoT-Stack submodule, there's a folder 'apps' containing a 'gateway' f
 
 ## Flashing custom firmware
 
-Jumper selection: DASH7 modem connected to serial-to-usb for flashing the device
+When your firmware is fully built ([build instructions](../Sub-iot#Building-instructions)) without any errors, the firmware-files should be available in the build folder.
 
-<img src="{{ site.baseurl }}/assets/img/gw_modem_flash.jpg" width="200" height="200"/>
-
-[the Sub-IoT page](../Sub-iot#Building-instructions). When your firmware is fully built without any errors, the firmware-files should be available in the build folder.
-
-Make sure the IOWAY gateway is plugged in through the USB-A connector to your computer.
+Make sure the IOWAY gateway is plugged in through the micro USB connector (located on the Olimex ESP32-board) to your computer.
 
 Flashing the firmware is done through the [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html). 
 
-Open up the programmer and select '**USB**' as the source:
+Open up the programmer and select '**UART**' as the source:
 
 ![]({{ site.baseurl }}/assets/img/STM32CubeProg-UART-source.png)
 
-Now activate the bootloader on the IOWAY gateway by holding the reset button (with circle symbol) and the boot button (with triangle symbol) of the D7 part of the gateway. Then first release the reset button and after the boot button. 
+Now activate the bootloader on the IOWAY gateway by pressing the 'prog' button of the Link7. It is the button located towards the middle of the device close the antenna connector. 
 
 Click the refresh button next to the port. Your device should pop-up as one of the options. Select it and press the 'Connect' button.
 
-![]({{ site.baseurl }}/assets/img/STM32CubeProg-UART-connected.png)
-
-Now press the 'Open file' button and select your firmware file. Then select 'Download' and it will start flashing the device. When it's done, a pop-up will show 'File download complete'.
+Now press the 'Open file' button and select your firmware file (/your/path/LiQuiBit/build/Link7-gateway/apps/gateway/gateway-full.hex). Then select 'Download' and it will start flashing the device. When it's done, a pop-up will show 'File download complete'.
 
 ![]({{ site.baseurl }}/assets/img/STM32CubeProg-UART-done.png)
 
@@ -68,11 +60,6 @@ All blocks are written so they could be easily swapped out by others, there are 
 
 ## Flashing custom firmware
 
-Jumper selection: esp32 connected to serial-to-usb for flashing the device
-
-<img src="{{ site.baseurl }}/assets/img/gw_esp_flash.jpg" width="200" height="200"/>
-
-
 
 In the Arduino IDE, first add an *Additional Boards Manager URL*: <https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json>
 
@@ -87,7 +74,7 @@ Then, configure the following settings:
 
 | Setting             | Value                 |
 |---------------------|-----------------------|
-| Board               | ESP32C3 Dev Module    |
+| Board               | OLIMEX ESP32-PoE    |
 | Upload speed        | 921600                |
 | Port                | /Your/USB/Port        |
 
@@ -114,11 +101,3 @@ Hard resetting via RTS pin...
 ```
 
 The program should now be running on the ESP32!
-
-# Operational mode
-
-To return the setup to an operational state, the following jumper selection should be used.
-
-Jumper selection: esp32 connected to DASH7 modem
-
-<img src="{{ site.baseurl }}/assets/img/gw_operational.jpg" width="200" height="200"/>

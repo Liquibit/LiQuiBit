@@ -47,7 +47,7 @@ Thus the following are available:
 | Push7 v3 | Release      | /your/path/LiQuiBit/build/PUSH7_V3-release/apps/push7_button/push7_button-full.hex      |
 | Push7 v3 | Debug      | /your/path/LiQuiBit/build/PUSH7_V3-debug/apps/push7_button/push7_button-full.hex      |
 | Push7 v3 | RTT-Debug      | /your/path/LiQuiBit/build/PUSH7_V3-rtt-debug/apps/push7_button/push7_button-full.hex      |
-| IOWAY | Release      | /your/path/LiQuiBit/build/IOWay-release/apps/gateway/gateway-full.hex      |
-| IOWAY | Debug      | /your/path/LiQuiBit/build/IOWay-debug/apps/gateway/gateway-full.hex      |
-| IOWAY | RTT-Debug      | /your/path/LiQuiBit/build/IOWay-rtt-debug/apps/gateway/gateway-full.hex      |
+| LINK7 gateway | Release      | /your/path/LiQuiBit/build/Link7-gateway/apps/gateway/gateway-full.hex      |
+| LINK7 example app | Release      | /your/path/LiQuiBit/build/Link7-release/apps/link7_basic/link7_basic-full.hex     |
+|  LINK7 example app  | Debug      | /your/path/LiQuiBit/build/Link7-debug/apps/link7_basic/link7_basic-full.hex     |
 
