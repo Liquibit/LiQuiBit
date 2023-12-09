@@ -19,7 +19,7 @@ The last chip provides us with DASH7 communication. An external antenna should b
 
 ## Components
 
-![]({{ site.baseurl }}/assets/img/gw.jpg)
+![]({{ site.baseurl }}/assets/img/ioway_gw.jpg)
 
 
 ## Default firmware

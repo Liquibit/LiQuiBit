@@ -11,7 +11,7 @@ The on-board serial-to-USB converter allows us to easily reprogram the chip and 
 
 ## Components
 
-![]({{ site.baseurl }}/assets/img/link7.jpg)
+![]({{ site.baseurl }}/assets/img/link7_dev.jpg)
 
 
 ## Default firmware
