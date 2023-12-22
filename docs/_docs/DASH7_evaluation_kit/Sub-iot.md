@@ -14,11 +14,38 @@ Sub-IoT is an open-source DASH7 and LoRaWAN stack. This stack is used for the Pu
 * GCC-based toolchain: For example [GNU ARM Embedded](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain) for ARM Cortex-M based platforms. By default, the build system assumes the GNU ARM Embedded toolchain is located in the PATH environment variable (meaning you can run arm-none-eabi-gcc without specifying the full path). The version of the GNU ARM Embedded toolchain that most well supports Sub-IoT is gcc-arm-none-eabi-8-2018-q4-major.
 * [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html): multi-OS tool for programming STM32 products.
 
+### Tool installation
+
+#### Windows
+
+When using windows, it is recommended to use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install). This can be installed using the following command in a Windows Command Prompt in administrator mode:
+   
+     wsl --install
+
+After installation, the wsl environment can be entered with the following command:
+    
+    wsl
+
+When you've entered the wsl environment, you can follow the steps for Linux to get the required tools. You can find your files created in the WSL environment (the build firmware files for instance) in your windows environment using windows explorer with the following de address: 
+
+    \\wsl.localhost\Ubuntu\home
+
+We recommend to use visual studio code to write code for the sub-iot stack. Instructions on how to use visual studio code in combination with wsl are listed here: [https://code.visualstudio.com/docs/remote/wsl](https://code.visualstudio.com/docs/remote/wsl)
+
+#### Linux (Ubuntu)
+
+    sudo apt-get update -y
+    sudo apt install cmake -y
+    wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/8-2018q4/gcc-arm-none-eabi-8-2018-q4-major-linux.tar.bz2
+    sudo tar xvf gcc-arm-none-eabi-8-2018-q4-major-linux.tar.bz2 --directory /opt/
+    sudo ln -s /opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-*  /usr/local/bin/
+
 ## Building instructions {#building}
 
 To build the Push7 and DASH7 gateway application, clone the [LiQuiBit repository](https://github.com/Liquibit/LiQuiBit) and build it.
 
-    $ git clone https://github.com/Liquibit/LiQuiBit
+    $ git clone https://github.com/Liquibit/LiQuiBit --recursive
+    $ cd LiQuiBit/
     $ cmake .
     -- Cross-compiling using gcc-arm-embedded toolchain
 	-- Cross-compiling using gcc-arm-embedded toolchain
