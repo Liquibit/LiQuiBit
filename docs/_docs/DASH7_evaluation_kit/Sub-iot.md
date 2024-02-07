@@ -40,6 +40,14 @@ We recommend to use visual studio code to write code for the sub-iot stack. Inst
     sudo tar xvf gcc-arm-none-eabi-8-2018-q4-major-linux.tar.bz2 --directory /opt/
     sudo ln -s /opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-*  /usr/local/bin/
 
+#### Mac OS
+
+    brew install cmake
+    wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/8-2018q4/gcc-arm-none-eabi-8-2018-q4-major-mac.tar.bz2
+    sudo tar xvf gcc-arm-none-eabi-8-2018-q4-major-mac.tar.bz2 --directory /opt/
+    sudo ln -s /opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-*  /usr/local/bin/
+
+
 ## Building instructions {#building}
 
 To build the Push7 and DASH7 gateway application, clone the [LiQuiBit repository](https://github.com/Liquibit/LiQuiBit) and build it.
