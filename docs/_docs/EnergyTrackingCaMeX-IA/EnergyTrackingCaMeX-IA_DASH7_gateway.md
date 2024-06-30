@@ -19,11 +19,13 @@ The PyD7A library is written in Python specifically designed to work with the DA
 
 In this case, the Python script is using the PyD7A library to convert the ALP messages received from the IOWAY over the serial connection into MQTT packages, which can then be transmitted over a network. This allows the Raspberry Pi to receive the ALP messages from the IOWAY and forward them using the MQTT protocol.
 
-The format of these MQTT packages is determined by the mindsphere IOT platform.
+The format of these MQTT packages is determined by the Scorp-IO platform. You can find their documentation [here](https://scorp-io.gitbook.io/guide-to-scorp-io/broker-public/configuration-mqtts).
 
-Monit is used to ensure this script keeps running and is started when the Raspberry pi is rebooted. The device also keeps track of all received data in a text file. This can be used for debugging and recovering lost data.
+Monit is used to ensure this script keeps running and is started when the Raspberry Pi is rebooted. 
 
-You can find raspberry pi gateway software [here](https://github.com/Liquibit/EnergyTrackingCaMeX-IA/tree/main/Gateway-software).
+The device also log all received data in a text file. This can be used for debugging and recovering lost data. This file gets rotated every week to make sure it's not filling up memory of the Raspberry Pi.
+
+You can find Raspberry Pi gateway software [here](https://github.com/Liquibit/EnergyTrackingCaMeX-IA/tree/main/Gateway-software).
 
 ## IOWAY
 
