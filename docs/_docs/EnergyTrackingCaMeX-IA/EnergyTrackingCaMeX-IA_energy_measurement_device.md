@@ -19,8 +19,7 @@ The induced current in the Rogowski coil can be measured using a current transfo
 
 The Acurev 1310 was chosen for this job because it offers several features that make it well-suited for the task. These features include support for a wide range of Rogowski coils for measuring different current ranges, the ability to calculate energy consumption for a three-phase system, and the capability to expose measurements through a RS485 Modbus interface.
 
-
-
+Additional measurement setups were requested with lower current requirements. For these measurements we use the same measurement device, the Acurev 1310, but select a different current transformer, the 333mV CT clamps. These clamps are designed to output a voltage of 333mV AC at their rated current. The 333mV CT clamps ensure accurate and reliable measurements at lower currents, meeting the specific requirements of the new measurement setups effectively. 
 
 
 ## Modbus
@@ -29,7 +28,7 @@ Modbus is a protocol that enables communication between a server and one or more
 
 
 
-## Device settings
+## Device settings 
 
 The schematic below shows the electrical setup:
 
@@ -40,3 +39,10 @@ For this schematic, the following settings are required:
 <img src="{{ site.baseurl }}\assets\img\energyTrackingCaMeX-IA\acurev_settings.png" width="800"/>
 
 These settings can be configured either directly on the device or by using a MODBUS to USB device and the acuUtils software. For more details, refer to the official manual at the following link: [https://www.accuenergy.com/products/acurev-1310-din-rail-power-energy-meter/](https://www.accuenergy.com/products/acurev-1310-din-rail-power-energy-meter/)
+
+
+When purchasing the Acurev device, it's crucial to specify the required probe type since the device is compatible with only one specific type indicated by the static CT2 setting (Rogowski coil CT2: 100, 333mv coil CT2: 333). Moreover, depending on the current rating of the probe, adjustments to the CT1 setting are necessary. This setting directly aligns with the probe's maximum current rating; for instance, if the probe's maximum current rating is 20A, the CT value should be set to 20.
+
+In this video, we demonstrate how to adjust the settings to accommodate a 333mV probe with a maximum current rating of 5A.
+
+[![instructions](http://img.youtube.com/vi/Mew2JVjznjg/0.jpg)](https://youtu.be/Mew2JVjznjg "Video Title")
