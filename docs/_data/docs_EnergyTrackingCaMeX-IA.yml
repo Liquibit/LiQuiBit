@@ -9,7 +9,8 @@
 - title: Network
   docs: 
   - EnergyTrackingCaMeX-IA_DASH7_gateway
-  - EnergyTrackingCaMeX-IA_mindsphere
+  - EnergyTrackingCaMeX-IA_scorp-io
+  - EnergyTrackingCaMeX-IA_DASH7_power_range
 - title: Licensing
   docs:
   - EnergyTrackingCaMeX-IA_licensing
